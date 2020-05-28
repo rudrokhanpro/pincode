@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+$primary: midnightblue;
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: "Roboto", Helvetica, Arial;
+}
+
+body {
+  padding: 20px;
+}
+
+#app {
+  margin: 0 auto;
+  padding: 10px;
+  border: 1px solid lightgray;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+button {
+  outline: 0;
+}
+
+.Printer__dot {
+  $dot_size: 12px;
+
+  display: inline-block;
+  width: $dot_size;
+  height: $dot_size;
+  margin: 0 4px;
+  background-color: #fff;
+  border: 1px solid $primary;
+  border-radius: 100px;
+
+  &.filled {
+    background-color: $primary;
+  }
+}
+
+#Printer {
+  padding: 10px;
+  line-height: 0;
+}
+
+#Keyboard {
+  padding: 10px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  &.reset {
+    display: block;
+  }
+
+  button {
+    height: 48px;
+    width: 48px;
+    line-height: 48px;
+    font-size: 24px;
+    border: 1px solid lightgray;
+    background-color: #fff;
+    color: midnightblue;
+    font-weight: bold;
+    border-radius: 100px;
+  }
+
+  .Keyboard__digitKey button:hover {
+    background-color: lightgray !important;
+  }
+
+  .Keyboard__action_button button {
+    background-color: $primary;
+    color: white;
+    border: 0;
+    position: relative;
+
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
